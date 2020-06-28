@@ -10,7 +10,7 @@ typora-root-url: md_pic
 > Create Date：	2020年6月16日
 > Note：
 
-![image-20200628100309002](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/1.png)
+![image-20200628100309002](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/1.png)
 
 [TOC]
 
@@ -24,7 +24,7 @@ typora-root-url: md_pic
 
 [Makerfabs Wiki](https://makerfabs.com/wiki/index.php?title=Main_Page)
 
-![image-20200628100727830](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/2.png)
+![image-20200628100727830](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/2.png)
 
 Makerfabs provides two Lora communication solutions, MakePython Lora and Maduino Lora. This experiment introduces how to use SX127X series module for Lora transceiver communication across platforms.And realize a soil moisture detection project:
 
@@ -54,13 +54,13 @@ gate->wifi : Humidity value (response)
 
 -  Connect the Lora Relay to PC through the download line and press the Moisture Sensor on the serial port welding plate with your hand on the other end.
 
-![image-20200628094837130](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/3.png)
+![image-20200628094837130](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/3.png)
 
 
 
 - After saving, select "Tools", select "Development Board" Arduino Pro or Pro min, select processor ATmega328p 3.3V 8MHz, and select corresponding serial port.
 
-![image-20200624111248264](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/4.png)
+![image-20200624111248264](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/4.png)
 
 - Open the serial port monitor and click "Upload" from the IDE interface.
 
@@ -74,29 +74,29 @@ gate->wifi : Humidity value (response)
   
 - Connect Relay with 12V DC。Since the current of Pro Mini itself is not enough to drive the relay module, it is unnecessary to add 12V DC when connecting the power supply.
 
-![image-20200628094909132](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/5.png)
+![image-20200628094909132](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/5.png)
 
 ## 2 MicroPython Lora
 
 - Plug the ESP32 and Lora extension boards together.
 
-![image-20200619170934064](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/6.png)
+![image-20200619170934064](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/6.png)
 
-![image-20200619170946542](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/7.png)
+![image-20200619170946542](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/7.png)
 
 - Connect MakePython ESP32 to your PC, open uPyCraft, and select connect to the serial port.
 - Firmware will be prompted if it has not been burned before or for other reasons.Board selects ESP32, BURN_addr selects 0x1000, Erase_Flash selects Yes, com selects the port number.Firmware Choose Users, click Choose to Choose ESP32-IDF3-20190125-v1.10.bin in the folder.
 
-![image-20200619152601330](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/8.png)
+![image-20200619152601330](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/8.png)
 
 - Download all python programs ending in.py from the \LoraS2G\workSpace to ESP32.
 
-![image-20200624111415256](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/9.png)
+![image-20200624111415256](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/9.png)
 
 - Press the RST button on ESP32 to reset the development board.The serial monitor displays the boot self - check information.
 - If all goes well, the serial port will have a log of the wifi connection and display on the ESP32'S LCD screen.
 
-![image-20200624152537711](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/10.png)
+![image-20200624152537711](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/10.png)
 
 - The first IP is the IP address that the node connects to WiFi.
 
@@ -105,15 +105,15 @@ gate->wifi : Humidity value (response)
 - Then we can access the relay control page.(The IP in the figure below is different from the above because of the change of network environment, please enter the address on the screen of ESP32)
 
 
-![image-20200628095604978](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/11.png)
+![image-20200628095604978](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/11.png)
 
 - You can also try using your phone to connect to WiFi and type in the same url so you can check the Lora Relay anytime, anywhere.
 
-![image-20200628095649404](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/12.png)
+![image-20200628095649404](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/12.png)
 
 - We can then click ON the RELAY ON and within three seconds the RELAY ON Lora's RELAY will be turned ON.The blue light will light up and the sound of the relay closing will be heard.
 
-![image-20200628100221870](/../https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/13.png)
+![image-20200628100221870](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/13.png)
 
 - The Lora Relay serial port will show the received message and send a response signal.
 

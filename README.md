@@ -7,10 +7,11 @@ typora-root-url: md_pic
 
 > Version:	V1.0
 > Author：	Vincent
-> Create Date：	2020年6月16日
+> Create Date：	2020/6/16/
 > Note：
+> 2020/6/29:Change doc in INFO and pic num.				 by Vincent
 
-![image-20200628100309002](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/1.png)
+![1](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/1.png)
 
 [TOC]
 
@@ -24,7 +25,7 @@ typora-root-url: md_pic
 
 [Makerfabs Wiki](https://makerfabs.com/wiki/index.php?title=Main_Page)
 
-![image-20200628100727830](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/2.png)
+![2](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/2.png)
 
 Makerfabs provides two Lora communication solutions, MakePython Lora and Maduino Lora. This experiment introduces how to use SX127X series module for Lora transceiver communication across platforms.And realize a soil moisture detection project:
 
@@ -54,13 +55,13 @@ gate->wifi : Humidity value (response)
 
 -  Connect the Lora Relay to PC through the download line and press the Moisture Sensor on the serial port welding plate with your hand on the other end.
 
-![image-20200628094837130](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/3.png)
+![3](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/3.png)
 
 
 
 - After saving, select "Tools", select "Development Board" Arduino Pro or Pro min, select processor ATmega328p 3.3V 8MHz, and select corresponding serial port.
 
-![image-20200624111248264](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/4.png)
+![4](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/4.png)
 
 - Open the serial port monitor and click "Upload" from the IDE interface.
 
@@ -74,29 +75,29 @@ gate->wifi : Humidity value (response)
   
 - Connect Relay with 12V DC。Since the current of Pro Mini itself is not enough to drive the relay module, it is unnecessary to add 12V DC when connecting the power supply.
 
-![image-20200628094909132](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/5.png)
+![5](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/5.png)
 
 ## 2 MicroPython Lora
 
 - Plug the ESP32 and Lora extension boards together.
 
-![image-20200619170934064](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/6.png)
+![6](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/6.png)
 
-![image-20200619170946542](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/7.png)
+![7](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/7.png)
 
 - Connect MakePython ESP32 to your PC, open uPyCraft, and select connect to the serial port.
 - Firmware will be prompted if it has not been burned before or for other reasons.Board selects ESP32, BURN_addr selects 0x1000, Erase_Flash selects Yes, com selects the port number.Firmware Choose Users, click Choose to Choose ESP32-IDF3-20190125-v1.10.bin in the folder.
 
-![image-20200619152601330](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/8.png)
+![8](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/8.png)
 
 - Download all python programs ending in.py from the \LoraS2G\workSpace to ESP32.
 
-![image-20200624111415256](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/9.png)
+![9](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/9.png)
 
 - Press the RST button on ESP32 to reset the development board.The serial monitor displays the boot self - check information.
 - If all goes well, the serial port will have a log of the wifi connection and display on the ESP32'S LCD screen.
 
-![image-20200624152537711](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/10.png)
+![10](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/10.png)
 
 - The first IP is the IP address that the node connects to WiFi.
 
@@ -105,15 +106,15 @@ gate->wifi : Humidity value (response)
 - Then we can access the relay control page.(The IP in the figure below is different from the above because of the change of network environment, please enter the address on the screen of ESP32)
 
 
-![image-20200628095604978](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/11.png)
+![11](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/11.png)
 
 - You can also try using your phone to connect to WiFi and type in the same url so you can check the Lora Relay anytime, anywhere.
 
-![image-20200628095649404](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/12.png)
+![12](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/12.png)
 
 - We can then click ON the RELAY ON and within three seconds the RELAY ON Lora's RELAY will be turned ON.The blue light will light up and the sound of the relay closing will be heard.
 
-![image-20200628100221870](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/13.png)
+![13](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/13.png)
 
 - The Lora Relay serial port will show the received message and send a response signal.
 
@@ -307,7 +308,7 @@ delay(3000);
 
 ### 4.3  controller_esp_lora_oled.py
 
-- controller_esp_lora_oled.Controller类继承于controller_esp.Controller。
+- controller_esp_lora_oled.Controller class inherits from the controller_esp.Controller.
 - The Controller_ESP_lora_OLd.Controller class inherits from the Controller_esp.Controller.
 
 ### 4.4 ssd1306.py
@@ -342,23 +343,23 @@ delay(3000);
 
 ### 1.1 Default parameters
 
-|属性|attribute|value|
-| ---- | ---- | ---- |
-|频率| frequency|433MHz|
-| 发射功率 |tx_power_level| 23 |
-|信号带宽 |signal_bandwidth | 125KHz |
-|扩频因子| spreading_factor | 7|
-| 编码率 |coding_rate|8|
-| 前导码长度 |preamble_length|8|
-| 隐式报头模式 |implicitHeader|True|
-| 同步字 |sync_word| 0x12|
-| 循环冗余码校验 |enable_CRC| True|
+|attribute|value|
+| ---- | ---- |
+|frequency|433MHz|
+|tx_power_level| 23 |
+|signal_bandwidth | 125KHz |
+|spreading_factor | 7|
+|coding_rate|8|
+|preamble_length|8|
+|implicitHeader|True|
+|sync_word| 0x12|
+|enable_CRC| True|
 
-### 1.2 SpreadingFactor 扩频因子
+### 1.2 SpreadingFactor
 
-LoRaTM扩频调制技术采用多个信息码片来代表有效负载信息的每个位。扩频信息的发送速
-度称为符号速率（Rs），而码片速率与标称符号速率之间的比值即为扩频因子，其表示每
-个信息位发送的符号数量。LoRaTM调制解调器中扩频因子的取值范围见下表。
+LoRaTM spread spectrum modulation USES multiple information chips to represent each bit of payload information.The speed at which spread spectrum information is transmitted
+The degree is called the symbol rate (Rs), and the ratio between the chip rate and the nominal symbol rate is the spread spectrum factor, which represents each
+The number of symbols sent by bits of information.The value range of spread spectrum factor in LoRaTM modem is shown in the table below.
 
 |RegModulationCfg|Chips / symbol|
 | -- | -- |
@@ -370,31 +371,33 @@ LoRaTM扩频调制技术采用多个信息码片来代表有效负载信息的�
 | 11 | 2048 |
 | 12 | 4096 |
 
-### 1.3 Coding Rate 编码率
+### 1.3 Coding Rate
 
-为进一步提高链路的鲁棒性，LoRaTM调制解调器采用循环纠错编码进行前向错误检测与纠
-错。使用这样的纠错编码之后，会产生传输开销。每次传输产生的数据开销见下表。
+In order to improve the robustness of link, LoRaTM modem adopts cyclic error correction code for forward error detection and correction
+Fault.After using such error-correcting coding, there is a transfer overhead.The data overhead per transfer is shown in the table below.
 
-| 编码率 | 循环编码率 | 开销比率 |
+
+
+
+| CodingRate(RegTxCfg1) | Cyclic Coding | Rate Overhead Ratio |
 | ------ | ---------- | -------- |
 | 1      | 4/5        | 1.25     |
 | 2      | 4/6        | 1.5      |
 | 3      | 4/7        | 1.75     |
 | 4      | 4/8        | 2        |
 
-### 1.4 Signal Bandwidth 信号带宽
+### 1.4 Signal Bandwidth
+The unit is **kHz** and the common value is **125kHz**
 
-单位为**kHz**，常用值为**125kHz**
+### 1.5 Preamble
 
-### 1.5 Preamble 前导码
+The Preamble code is used to keep the receiver in sync with the input data stream.By default, the packet contains 12 symbol lengths before
+Guide yards.The leading length is a variable that can be set programmatically, so the length of the leading code can be extended.
 
-前导码用于保持接收机与输入的数据流同步。默认情况下，数据包含有12个符号长度的前
-导码。前导长度是一个可以通过编程来设置的变量，所以前导码的长度可以扩展。
+### 1.6 Payload
 
-### 1.6 Payload 有效负载
-
-数据包有效负载是一个长度不固定的字段，而实际长度和纠错编码率CR则由显式模式下的
-报头指定或者由隐式模式下在寄存器的设置来决定。
+The packet payload is a field of variable length, while the actual length and error correction encoding rate (CR) are in explicit mode
+The header is specified or determined by the Settings in registers in implicit mode.
 
 
 

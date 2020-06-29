@@ -5,11 +5,11 @@ typora-root-url: md_pic
 
 # Lora Relay Wifi Project
 
-> Version:	V1.0
+> Version:	V1.1
 > Author：	Vincent
-> Create Date：	2020/6/16/
+> Create Date：	2020/6/16
 > Note：
-> 2020/6/29:Change doc in INFO and pic num.				 by Vincent
+> 2020/6/29         v1.1: Change doc in INFO and pic num.				 by Vincent
 
 ![1](https://github.com/Makerfabs/Project_Lora-Relay-Wifi/blob/master/md_pic/1.png)
 

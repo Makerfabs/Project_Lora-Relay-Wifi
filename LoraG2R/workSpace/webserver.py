@@ -28,10 +28,10 @@ def web_page(msg):
       <h1>Lora Relay</h1>
       <h2>Lora Relay status:""" + str(msg) + """</h2>
       <a href=\"?led=on\">
-        <button>RELAY ON</button>
-      </a>&nbsp;&nbsp;&nbsp;
+        <button style="background-color: #7ED321">RELAY ON</button>
+      </a>
       <a href=\"?led=off\">
-        <button>RELAY OFF</button>
+        <button style="background-color: #FFFFFF">RELAY OFF</button>
       </a>
     </body>
   </html>
@@ -66,5 +66,6 @@ def connect():
  do_connect(SSID,PASSWORD)
  global ip
  return ip
+
 
 

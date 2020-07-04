@@ -14,6 +14,7 @@
 #define LORA_NODE_TYPE 1 //0土壤传感器，1继电器,999test
 
 #define LORA_RELAY_PIN 4
+#define LORA_RELAY_STATUS_PIN 5
 #define SENSOR_PIN A2 //土壤湿度传感器adc引脚
 int sensorValue = 0;
 int sensorPowerCtrlPin = 5;
@@ -30,6 +31,7 @@ void setup()
 
   if (LORA_NODE_TYPE == 1)
     pinMode(LORA_RELAY_PIN, OUTPUT);
+  pinMode(LORA_RELAY_STATUS_PIN, OUTPUT);
 
   //重启
   pinMode(RFM95_RST, OUTPUT);
@@ -96,18 +98,18 @@ void loop()
       if (msg.indexOf("RELAY") == 0)
       {
         String message = "COMMAND WRONG";
-        if(msg.indexOf("ON") != -1)
+        if (msg.indexOf("ON") != -1)
         {
           relay_state = true;
           message = "Already ON";
         }
-          
-        else if(msg.indexOf("OFF") != -1)
+
+        else if (msg.indexOf("OFF") != -1)
         {
           relay_state = false;
           message = "Already OFF";
         }
-        
+
         Serial.println(message);
 
         delay(1000);
@@ -122,7 +124,7 @@ void loop()
           delay(10);
           rf95.send((uint8_t *)radioPacket, message.length() + 1);
         }
-        delay(3000);
+        delay(1000);
       }
     }
   }
@@ -131,7 +133,14 @@ void loop()
 void set_relay()
 {
   if (relay_state)
+  {
     digitalWrite(LORA_RELAY_PIN, HIGH);
+    digitalWrite(LORA_RELAY_STATUS_PIN, LOW);
+  }
+
   else
+  {
     digitalWrite(LORA_RELAY_PIN, LOW);
+    digitalWrite(LORA_RELAY_STATUS_PIN, HIGH);
+  }
 }

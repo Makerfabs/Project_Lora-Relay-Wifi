@@ -194,20 +194,27 @@ rf95.setPreambleLength(RF95_PREMABLE_LENGTH);
 
 
 
-### 3.3 Soil moisture detection module
+### 3.3 Relay module
 
 
 ```c++
-  sensorValue = analogRead(SENSOR_PIN);
-  String temp = String(sensorValue);
-  Serial.println(sensorValue);
-  String message = "SOIL" + temp;
-  Serial.println(message);
+if (msg.indexOf("ON") != -1)
+{
+  relay_state = true;
+  message = "Already ON";
+}
+
+else if (msg.indexOf("OFF") != -1)
+{
+  relay_state = false;
+  message = "Already OFF";
+}          
 ```
 
-- Splice the soil sensor values into a Message string.
+- Parse message data and set relay state.
 
 ```c++
+// Send a message to rf95_server
 uint8_t radioPacket[message.length() + 1];
 message.toCharArray(radioPacket, message.length() + 1);
 radioPacket[message.length() + 1] = '\0';
@@ -216,7 +223,6 @@ delay(10);
 rf95.send((uint8_t *)radioPacket, message.length() + 1);
 ```
 
-- Converts a string to a byte stream
 - Rf95.send (Uint8_t *) sends the byte stream through the Lora protocol.
 
 
